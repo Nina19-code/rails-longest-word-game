@@ -1,0 +1,8 @@
+<p><strong>Enter the longest word from: </strong> <%= @letters.join %></p>
+
+<form method= "post" action="/score">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+  <input type="text" name="word">
+  <input type="submit" value="Submit">
+</form>
